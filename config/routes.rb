@@ -1,5 +1,16 @@
 Rails.application.routes.draw do
 
+  get 'products/newarrivals'
+
+  get 'products/dresses'
+
+  get 'products/bags'
+
+  get 'products/sale'
+
+  get 'home/about'
+
+
 root 'home#index'
 get 'home/index'
 

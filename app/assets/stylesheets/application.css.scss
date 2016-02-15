@@ -1,4 +1,15 @@
+$navbar-inverse-bg: #ffffff;
+$navbar-inverse-brand-color: #cb2027;
+$navbar-inverse-link-color: #000;
+$navbar-inverse-link-active-bg: #000;
+$navbar-toggle-hover-bg: #000;
+$navbar-inverse-link-hover-bg: #000;
+$navbar-inverse-brand-hover-color:#000;
+
+$navbar-height: 40px;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
 

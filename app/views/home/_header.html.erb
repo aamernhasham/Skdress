@@ -17,10 +17,40 @@ color: black;
 
 </style>
 
-<b><%=link_to 'Home', root_path%>
-<b><%=link_to 'About Us', home_about_path%>
-<br>
-<br>
+
+
+
+
+<nav class="navbar navbar-default" role="navigation">
+
+<!-- Need to better understand what a nav class is vs. div class -->
+<div class="container">
+
+<!-- Didn't understand a bit of the code below re: button types etc. -->
+	<div class="navbar-header">
+		<!-- Need to better understand what span class means?? -->
+		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs=example-navbar-collapse-1">
+		<span class="sr-only"> Toggle navigation</span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		</button>
+		
+		<%=link_to 'SK Dresses',root_path, class: 'navbar-brand' %>
+
+
+	</div>
+<!-- Up until this point in the code, you have a full functioning nav bar with one content, which is the word "Brand" -->
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse=1">
+	<ul class="nav navbar-nav navbar-right">
+		<li><%=link_to 'Home', root_path%></li>
+		<li><%=link_to 'About Us', home_about_path%></li>
+	</ul>
+
+</div>
+
+</nav>
+
 
 <ul>
 <li> <b><%= link_to 'New Arrivals', products_newarrivals_path%> </b> </li>

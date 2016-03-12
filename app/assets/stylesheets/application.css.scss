@@ -2,12 +2,17 @@ $navbar-inverse-bg: #ffffff;
 $navbar-inverse-brand-color: #cb2027;
 $navbar-inverse-link-color: #000;
 $navbar-inverse-link-active-bg: #000;
-$navbar-toggle-hover-bg: #000;
+$navbar-toggle-hover-bg: #000; // This is for the actual hover background color which is black
 $navbar-inverse-link-hover-bg: #000;
 $navbar-inverse-brand-hover-color:#ffffff; // This is for font-colour
-$navbar-inverse-brand-hover-bg:#000; // This is for the actual hover color
+$navbar-inverse-brand-hover-bg:#000; // This is for the actual hover background color which is black
 $navbar-height: 50px;
 
+/*
+Adding information for the Jumbotron
+
+*/
+$jumbotron-bg: #e5ffbe;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 

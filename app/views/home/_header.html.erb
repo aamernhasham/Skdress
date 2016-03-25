@@ -45,6 +45,17 @@ color: black;
 	<ul class="nav navbar-nav navbar-right">
 		<li><%=link_to 'Home', root_path%></li>
 		<li><%=link_to 'About Us', home_about_path%></li>
+
+		<!-- This is where we check if the user has logged in or not -->
+
+		<% if user_signed_in?%>
+		<li><%= link_to 'Edit Profile', edit_user_registration_path %></li>
+		<li><%= link_to 'Logout', destroy_user_session_path, method: :delete%></li>
+		
+		<!-- If a user is not signed in, we can also create a bunch of links that let the users log in.I have excluded that from this code-->
+
+		<% end %>
+
 	</ul>
 
 

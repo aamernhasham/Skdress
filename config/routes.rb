@@ -1,19 +1,17 @@
 Rails.application.routes.draw do
 
+  #get 'products/newarrivals'=>'products#index'
+
+  get 'products/dresses' => 'products#index'
+  get 'home/about'
+  #get 'products/sale'=>'products#sale'
+
  
   resources :products
-  resources :products
-  resources :products
+  #resources :products
+  #resources :products
   devise_for :users
-  get 'products/newarrivals'
-
-  get 'products/dresses'
-
-  get 'products/bags'
-
-  get 'products/sale'
-
-  get 'home/about'
+  
 
   root 'home#index'
   

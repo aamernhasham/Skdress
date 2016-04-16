@@ -8,13 +8,12 @@ $navbar-inverse-brand-hover-color:#ffffff; // This is for font-colour
 $navbar-inverse-brand-hover-bg:#000; // This is for the actual hover background color which is black
 $navbar-height: 50px;
 
-/*
-Adding information for the Jumbotron
-
-*/
 $jumbotron-bg: #e5ffbe;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.center {
 
-
+	text-align: center;
+}

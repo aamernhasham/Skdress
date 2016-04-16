@@ -1,22 +1,29 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Listing Products</h1>
+    <div id="products" class="transitions-enabled">
 
     <% @products.each do |product| %>
-      
-        <%=image_tag product.image.url(:medium)%><br/>
+       <div class ="box">
+       <div class="panel panel-default">
+        <%=link_to image_tag(product.image.url(:medium)),product %><br/>
+        <div class="panel-body">
         <strong><%= product.description %></strong><br/>
         <strong><%= product.price %></strong><br/>
-        <%= link_to 'Details', product %>
+        </div>
+        
+
       <% if product.user==current_user%>
+      <div class="panel-footer">
          |<%= link_to 'Edit', edit_product_path(product) %>|
          <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %><br/>
-        <% else %>
-        <br>
+        </div>
         <%end%>
-    <% end %>
-</table>
+</div>
+</div>
 
-<br>
+    <% end %>
+</div>
 
 <%= link_to 'New Product', new_product_path %>
+
+<div class="center">
+<%= will_paginate @pins,renderer: BootstrapPagination::Rails %>
+</div>

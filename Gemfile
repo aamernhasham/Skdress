@@ -37,6 +37,13 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 
 gem 'devise','~>3.4.1'
 
+gem 'jquery-turbolinks'
+
+gem 'masonry-rails','0.2.4'
+
+gem 'will_paginate', '~> 3.0.7'
+gem 'will_paginate-bootstrap', '~> 1.0.1'
+
 #gem 'aws-sdk', '~>1.60.2'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

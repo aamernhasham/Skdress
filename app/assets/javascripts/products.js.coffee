@@ -1,7 +1,6 @@
 #
 #
 #
-
 $ ->
 	$('#products').imagesLoaded ->
 	 $('#products').masonry

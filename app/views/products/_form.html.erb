@@ -24,6 +24,12 @@
     <%= f.label :price %><br>
     <%= f.number_field :price %>
   </div>
+
+  <div class="field">
+  <%= f.label :'Add this product to main site?'%><br/>
+  <%= f.check_box :displaymain%>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -10,14 +10,18 @@
 <div class="jumbotron">
 Welcome to SK Dresses
 
-Here you will find a great collection of ladies fashion (clothes, bags and accessories)
+Here you will find a great collection of ladies fashion (clothes, bags and accessories)<br/>
 
+
+<% @products.each do |product| %>
+
+<%=image_tag product.image.url(:medium) %><br/>
+
+<% end %>
 
 </div>
 
 </body>
 
 </html>
-
-
 

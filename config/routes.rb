@@ -3,13 +3,8 @@ Rails.application.routes.draw do
   #get 'products/newarrivals'=>'products#index'
 
   get 'products/dresses' => 'products#index'
-  get 'home/about'
-  #get 'products/sale'=>'products#sale'
-
- 
+  get 'home/about' =>'home#about'
   resources :products
-  #resources :products
-  #resources :products
   devise_for :users
   
 

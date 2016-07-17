@@ -1,11 +1,20 @@
 Rails.application.routes.draw do
 
-  root 'home#index'
-  resources :products
+  #get 'products/newarrivals'=>'products#index'
+
   get 'products/dresses' => 'products#index'
   get 'home/about' => 'home#about_us'
+  
+  #get 'products/sale'=>'products#sale'
+
+ 
+  resources :products
+  #resources :products
+  #resources :products
   devise_for :users
   
+
+  root 'home#index'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

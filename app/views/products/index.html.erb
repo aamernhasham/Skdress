@@ -4,22 +4,27 @@
     <% @products.each do |product| %>
         <div class="box">
         <%=link_to image_tag(product.image.url(:medium)),product %><br/>
+        <div class="center">
         <div class="panel-body">
+        
         <%= product.description %><br/>
         <%= product.price %><br/>
         </div>
-        
       <% if product.user==current_user%>
-         |<%= link_to 'Edit', edit_product_path(product) %>|
-         <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %><br/>
+         <%= link_to fa_icon("pencil") + 'Edit', edit_product_path(product), class: "btn btn-primary btn-xs" %>
+         <%= link_to fa_icon("trash") + 'Delete', product, class: "btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %><br/>
         <%end%>
+        </div>
         </div>
     <% end %>
 </div>
 
 
+
 <div class="center">
-<%= link_to 'New Product', new_product_path %><br/>
+<% if user_signed_in? %>
+<%= link_to fa_icon("plus") + 'New Product', new_product_path, class: "btn btn-success" %>
+<%end%>
 <%= will_paginate @products,renderer: BootstrapPagination::Rails %>
 </div>
 </div>

@@ -4,6 +4,7 @@
 <div class="col-md-offset-2 col-md-8">
 <div class="panel panel-default">
 <div class="panel-heading center"><%= image_tag @product.image.url(:medium)%></div>
+<div class="center">
 <div class="panel-body">
 
 
@@ -16,10 +17,11 @@
 <br/>
 
 <% if @product.user==current_user%>
-<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to fa_icon("pencil") + 'Edit', edit_product_path(@product), class: "btn btn-primary" %>
 <%end%>
 
-<%= link_to 'Back', products_path %>
+<%= link_to fa_icon("backward") + 'Back', products_path, class: "btn btn-info" %>
+</div>
 </div>
 </div>
 </div>

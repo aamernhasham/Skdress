@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'home#index'
   resources :products
   get 'products/dresses' => 'products#index'
-  get 'home/about' => 'home#about'
+  get 'home/about' => 'home#about_us'
   devise_for :users
   
   

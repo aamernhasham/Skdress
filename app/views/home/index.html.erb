@@ -9,11 +9,51 @@
       </head>
 <body>
 
+<div class="jumbotron">
+
+<p><font size="3" color="black"> Welcome to our website. Here you will find the best collection of ladies south indian traditional dresses. <br/>
+We keep our site current and you will always find special deals and promotions<br/></font></p>
+
+<div id="myTopThreeImages" class="carousel slide" data-ride="carousel">
+<!--<ol class="carousel-indicators">
+<li data-target="#myTopThreeImages" data-slide-to="0" class="active"></li>
+</ol>-->
+
+<div class="carousel-inner" role="listbox">
+<% if @products.present?%><!--this checks if there are any objects in the products-->
+
+<div class="item active">
+<%= image_tag(@products.first.image.url(:medium))%>
+</div> <!--covered with the item active-->
 
 
+<div class="item">
+<%= image_tag(@products.last.image.url(:medium))%>
+</div><!--covered with the item-->
+<%end%> <!--end of the if statement to check if the products are empty-->
+
+ <a class="left carousel-control" href="#myTopThreeImages" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myTopThreeImages" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div><!--covers carousel-inner-->
+</div><!--covers div id "myTopThreeImages"-->
+<div align="center"> <font size="2"><b>New Additions this month!</b></font></span></div>
+<br/>
+<br/>
+<div align="center">
+<%= link_to "New Additions", products_path, class: "btn btn-primary btn-medium"%>
+
+<%=link_to "Our Collection", products_path, class: "btn btn-primary btn-medium"%>
 
 
+</div>
 
+</div> <!-- this is where Jumbotron ends-->
 
 
 </body>

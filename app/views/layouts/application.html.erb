@@ -9,6 +9,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<div id="wrap">
+
 <%= render 'home/header' %>
 
 
@@ -22,23 +25,25 @@
 
 
 </ul></b>
+</div><!--First Container-->
 
 <div class="container">
 <% flash.each do |name,msg| %>
 <%=content_tag(:div, msg, class:"alert alert-info")%>
 <%end%>
 
-</div>
+</div> <!--Second Container-->
+
 <%= yield %> 
+<div id="push"></div>
 
+</div> <!--wrap-->
+
+<div id="footer">
+<div class="container">
+<p class="text-muted">SK Dress Inc. Your One Stop Shop for Quality Clothing!</p>
 </div>
 </div>
-
-
-<%= render 'home/footer' %>
-
-
-
 
 </body>
 </html>

@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   #get 'products/newarrivals'=>'products#index'
 
   get 'products/dresses' => 'products#index'
-  get 'home/about' => 'home#about_us'
+  get 'home/contact' => 'home#contact'
   
   #get 'products/sale'=>'products#sale'
 

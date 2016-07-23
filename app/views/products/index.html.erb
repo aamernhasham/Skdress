@@ -6,8 +6,7 @@
         <div class="center">
         <div class="panel-body">
         
-        <%= product.description %><br/>
-        <%= product.price %><br/>
+        <%= product.product_code %><br/>
         </div>
       <% if product.user==current_user%>
          <%= link_to fa_icon("pencil") + 'Edit', edit_product_path(product), class: "btn btn-primary btn-xs" %>
@@ -17,8 +16,6 @@
         </div>
     <% end %>
 </div>
-
-
 
 <div class="center">
 <% if user_signed_in? %>

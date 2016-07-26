@@ -1,3 +1,6 @@
+<div id="wrap">
+<div class="container">
+
     <div id="products" class="transitions-enabled">
 
     <% @products.each do |product| %>
@@ -5,8 +8,8 @@
         <%=link_to image_tag(product.image.url(:medium)),product %><br/>
         <div class="center">
         <div class="panel-body">
-        
-        <%= product.product_code %><br/>
+        <h6> Product Code </h6>
+        <h6><%= product.product_code %></h6><br/>
         </div>
       <% if product.user==current_user%>
          <%= link_to fa_icon("pencil") + 'Edit', edit_product_path(product), class: "btn btn-primary btn-xs" %>
@@ -15,7 +18,10 @@
         </div>
         </div>
     <% end %>
-</div>
+</div><!--div container-->
+<div id="push"></div>
+
+</div><!--div wrap-->
 
 <div class="center">
 <% if user_signed_in? %>

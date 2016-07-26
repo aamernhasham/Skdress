@@ -9,7 +9,7 @@
         <div class="center">
         <div class="panel-body">
         <h6> Product Code </h6>
-        <h6><%= product.product_code %></h6><br/>
+        <b><%= product.product_code %></b><br/>
         </div>
       <% if product.user==current_user%>
          <%= link_to fa_icon("pencil") + 'Edit', edit_product_path(product), class: "btn btn-primary btn-xs" %>
@@ -19,9 +19,9 @@
         </div>
     <% end %>
 </div><!--div container-->
-<div id="push"></div>
 
 </div><!--div wrap-->
+
 
 <div class="center">
 <% if user_signed_in? %>
